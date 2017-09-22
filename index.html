@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dog and Lion</title>
+        <link rel="stylesheet" href="./style/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="./mainCtrl.js"></script>
+    </head>
+    <body>
+        <div id="homePageMap">
+            <img id="worldMap" src="./src/worldMap.jpg" alt="WorldMap" style="width: 100%" >
+            <div>
+                <img id="TorontoFlag" class="mapLocation floatOverMap" src="./src/flag.png" onclick="window.location = './Toronto'">
+                <img id="ItalyFlag" class="mapLocation floatOverMap" src="./src/flag.png" onclick="window.location = './Italy'">
+                <img id="SpainFlag" class="mapLocation floatOverMap" src="./src/flag.png" onclick="window.location = './Spain'">
+                <img id="FranceFlag" class="mapLocation floatOverMap" src="./src/flag.png" onclick="window.location = './France'">
+                <img id="TurkeyFlag" class="mapLocation floatOverMap" src="./src/flag.png" onclick="window.location = './Turkey'">
+                <img id="NetherlandsFlag" class="mapLocation floatOverMap" src="./src/flag.png" onclick="window.location = './Netherlands'">
+            </div>
+            <div>
+                <img id="paperPlane" class="floatOverMap" src="./src/paperPlane.png" style="width:1.5em; top: 22em; left: -5em;">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h1 class="lead text-center">
+                    <span class="glyphicon glyphicon-hand-up"></span><br>
+                    The Dog and the Lion have been to these places
+                </h1>
+            </div>
+            <span class="glyphicon glyphicon-cloud" style="float: left; top: 1.2em; left: 2.5em"></span>
+            <hr style="margin: 2.5em 5em 2.5em 5em; border-width: 1em;">
+            <span class="glyphicon glyphicon-road" style="float: right; top: -3.5em; right: 2.5em"></span>
+            <div>
+                <h1 class="lead text-center">
+                    The Dog and the Lion Love Each Other and Traveling<br>
+                    <span class="glyphicon glyphicon-hand-down"></span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="width:100%">
+            <div class="row" id="homePhotoWall"></div>
+            <div style="text-align: center">
+                <p id="loadingIcon" style="display: none">Loading</p>
+                <button onclick="homePageLoadImg()" class="btn btn-default">Load More</button>
+            </div>
+        </div>
+    </body>
+</html>

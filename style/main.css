@@ -1,0 +1,99 @@
+h1 {
+    font-family: "Montserrat", sans-serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI",Arial,sans-serif
+}
+
+/* #worldMap {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0em;
+} */
+
+.floatOverMap {
+    position: absolute;
+}
+
+#paperPlane {
+    -webkit-animation: fly 4s ease-out;
+    -webkit-transform: scale(0.675, 0.675);
+}
+
+.mapLocation {
+    width:1.5em;
+}
+
+.photo {
+    max-width: 15em;
+    max-height: 15em;
+}
+
+.photoModel {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background: white; 
+    text-align: center;
+    -webkit-animation: homePhotoAppear 1s
+}
+
+@keyframes fly {
+}
+
+@keyframes homePhotoAppear {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes wipeFog {
+    0% {
+        width: 5em;
+        height: 5em;
+        filter: blur(10px);
+    }
+    20% {
+        width: 15em;
+        height: 15em;
+        filter: blur(0px);
+    }
+    80% {
+        width: 15em;
+        height: 15em;
+        filter: blur(0px);
+    }
+    100% {
+        width: 0em;
+        height: 0em;
+        filter: blur(10px);
+    }
+}
+
+.fog {
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    float: left;
+    background: transparent;
+    border-radius: 50%;
+    filter: blur(10px);
+    animation-name: wipeFog;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+}
+
+.pic {
+    text-align: center;
+    position: relative;
+    height: 250px;
+}
+.blur {
+    height: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+}
